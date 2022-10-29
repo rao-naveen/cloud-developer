@@ -23,7 +23,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     var image_url = req.query.image_url;
     if(typeof image_url == 'undefined')
     {
-      res.status(400).send("image_url is missing in URL");
+      res.status(422).send("image_url is missing in URL");
       return;
     }
     
